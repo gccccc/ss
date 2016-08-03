@@ -254,7 +254,7 @@ class DmozSpider(scrapy.Spider):
 
     def addNotExistName(self, name, projectname):
         with open("legalButNoTel.txt", "a+") as f:
-            f.write('%s %s\n' % (name.ljust(40), projectname.ljust(40)))
+            f.write('%s || %s\n' % (name, projectname))
 
     def nameIsLegal(self, name):
         legalLst = ['鞋', '箱', '包', '酒店用品', '服饰', '面料', '纺织', '服装', '成衣']

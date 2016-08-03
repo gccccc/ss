@@ -23,6 +23,6 @@ class baseInfoPipeline(object):
         with open('./line.list','a+') as f:
         	area = '%s,%s,%s' % (dic['area']['province_name'], dic['area']['city_name'], dic['area']['area_name'])
         	#output_info = '%s %s %s %s %s %s %s %s %s\n' % (dic['name'].ljust(20), dic['projectname'].ljust(20), dic['projectkind'].ljust(20), dic['projectproperty'].ljust(20), dic['fundtype'].ljust(20), dic['phone'].ljust(20), dic['mobilephone'].ljust(20), dic['website'].ljust(20), area.ljust(20))
-        	output_info = '%s %s %s %s %s %s %s\n' % (dic['name'].ljust(30), dic['projectname'].ljust(30), dic['year'].ljust(5), dic['phone'].ljust(20), dic['mobilephone'].ljust(12), area.ljust(20), dic['website'].ljust(20))
-        	f.write('%s' % output_info)
+        	output_info = '%s || %s || %s || %s || %s || %s || %s' % (dic['name'], dic['projectname'], dic['year'], dic['phone'], dic['mobilephone'], area, dic['website'])
+        	f.write('%s\n' % output_info)
         return item
